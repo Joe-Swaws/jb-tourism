@@ -1,0 +1,237 @@
+/* BARRE DE NAVIGATION */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+nav {
+  background: #272727;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 50px;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+  transform: translateX(100px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(50px);
+  transform: translateX(50px);
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(260px);
+  transform: translateX(260px);
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(400px);
+  transform: translateX(400px);
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(585px);
+  transform: translateX(585px);
+  opacity: 1;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1e1f26;
+}
+
+header {
+  background: url(https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F09.2F18.2Fe003bf41-03f0-4f93-9599-2bad6d7cc844.2Ejpeg/1150x647/background-color/ffffff/quality/70/guadeloupe-5-iles-pour-un-voyage-grandeur-nature.jpg) no-repeat;
+  padding-top: 62%;
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+}
+
+header h1 {
+  position: absolute;
+  top: 1em;
+  right: 2rem;
+  font-size: 9vw;
+  line-height: 0.8;
+  margin-top: 0;
+}
+
+header h1 span {
+  display: block;
+  font-size: 8.75vw;
+}
+
+main {
+  background: #e5fbff;
+  position: relative;
+  border: 1px solid #fff;
+  font-family: 'IM Fell French Canon Pro', serif;
+  font-size: 1.4rem;
+  padding: 2rem 2%;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  nav {
+    border-radius: 0;
+    text-align: center;
+  }
+  
+  .navMenu a {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  header h1 {
+    font-size: 7vw;
+  }
+  
+  header h1 span {
+    font-size: 6.75vw;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+    width: 50%;
+  }
+
+  header h1 {
+    font-size: 5vw;
+  }
+  
+  header h1 span {
+    font-size: 4.75vw;
+  }
+  
+  .slider {
+    width: 100%;
+  }
+  
+  .slider-viewport {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slider-content img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  background-color: #383838;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .col {
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.footer .col h1 {
+  margin: 0;
+  padding: 20px 0 5px;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .col ul li {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+}
+
+.clearfix {
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .footer .col {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .col {
+    width: 100%;
+  }
+}
